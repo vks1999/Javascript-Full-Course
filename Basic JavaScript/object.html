@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script>
+        var a = {
+            fName: "Vikash",
+            lName: "Singh",
+            age: 25,
+            email: "vsr2399@gmail.com",
+            favMovies: ["Dhoom", "Sholay", "Hum"],
+            living: {
+                'city': 'Varanasi',
+                'country': 'India'
+            },
+            salary: function () {
+                return 25000;
+            },
+            fullname: function () {
+                return this.fName + " " + this.lName;
+            }
+        }
+        // document.write(a);
+        console.log(a);
+        console.log(a.fName);
+        // document.write(a.favMovies[0]);
+        // document.write(a.salary());
+        // document.write(a.fullname());
+        document.write(a.living.city);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

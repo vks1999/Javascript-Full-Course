@@ -1,0 +1,61 @@
+@import "color.css";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: 18px/24px arial;
+}
+
+#wrapper {
+    border: 1px solid black;
+    width: 1000px;
+    background: white;
+    margin: 0 auto;
+}
+
+#top-bar {
+    background: MEDIUMPURPLE;
+}
+
+#header {
+    min-height: 100px;
+    font-family: arial;
+    border-bottom: 1px solid black;
+}
+
+#header h1 {
+    padding: 30px 0 0 20px;
+    margin: 0;
+}
+
+#menu {
+    border-bottom: 1px solid black;
+}
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    display: inline-block;
+}
+
+#menu li a {
+    display: block;
+    padding: 10px 13px;
+    text-decoration: none;
+}
+
+#menu li a:hover {}
+
+#content {
+    width: 795px;
+    min-height: 500px;
+    padding: 15px;
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance JavaScript</title>
+
+    <script>
+        // Normal Way
+
+        // let user = "Vikash";
+        // document.write("Hello " + user + " welcome to 2022");
+
+        // Template Literal
+
+        // let user = "Vikash Singh";
+        // let marks = 350;
+        // document.write(`Hello ${user} your marks is ${marks}`);
+        /*let hello = `Hello "${user}"
+        your 'marks'
+        is '${marks}'`;
+        document.write(hello);
+        console.log(hello);*/
+
+        let firstName = "Vikash";
+        let lastName = "Singh";
+        function fullname(firstName, lastName) {
+            return `${firstName} ${lastName}`;
+        }
+        let hello = `Hello ${fullname(firstName, lastName)}`;
+        document.write(hello);
+        console.log(hello);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

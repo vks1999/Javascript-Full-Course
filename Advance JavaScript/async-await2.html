@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance JavaScript</title>
+    <script>
+        async function test() {
+            try {
+                const response = await fetch("json/student_data.json");
+                const students = await response.json();
+                return students;
+
+            } catch (err) {
+                console.log(err);
+
+            }
+            // console.log("2 : Message");
+            // console.log("3 : Message");
+            // console.log("4 : Message");
+            // return (await fetch("json/student_data.json")).json();
+        }
+
+        // console.log("1 : Message");
+        // let a = test();
+        test().then((res) => {
+            console.log(res);
+        }).catch((err) => {
+        });
+        // console.log("5 : Message");
+        // console.log(a);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

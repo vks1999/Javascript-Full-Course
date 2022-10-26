@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance JavaScript</title>
+    <script>
+        // let n = "name";
+        let n = "student";
+
+        /*var obj = {
+            [n + "name"]: "Vikash",
+            course: "B.Tech",
+            detail: function () {
+                return `${this.studentname} is a student of ${this.course}`;
+            }
+        };*/
+        /*var obj = {
+             [n + "name"]: "Vikash",
+             course: "B.Tech",
+             'detail show'() {
+                 return `${this.studentname} is a student of ${this.course}`;
+             }
+         };*/
+
+        // console.log(obj);
+        // console.log(obj.detail());
+        // console.log(obj['detail show']());
+        // console.log(obj.studentname);
+        // console.log(obj.name);
+
+        // let name = "Vikash";
+        let fname = "Vikash";
+        let lname = "Singh";
+        let course = "B.Tech";
+
+        function student(fname, lname, course) {
+            let fullname = fname + " " + lname;
+            return { fullname, course };
+        }
+        let s = student(fname, lname, course);
+        console.log(s.fullname);
+        console.log(s.course);
+        // console.log(student(fname, lname, course));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

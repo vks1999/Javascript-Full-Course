@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance JavaScript</title>
+    <script>
+        /*function sum() {
+            console.log(arguments);
+
+            let sum = 0;
+            for (let i in arguments) {
+                sum += arguments[i];
+            }
+            document.write(sum + "<br/>");
+        }*/
+        function sum(name, course, ...args) {
+            console.log(arguments);
+
+            document.write(`Hello ${name} of ${course} : `)
+
+            let sum = 0;
+            for (let i in args) {
+                sum += args[i];
+            }
+            document.write(sum + "<br/>");
+        }
+
+        // sum(20, 30, 40);
+        // sum("Vikash", 20, 30, 40);
+        sum("Vikash", "B.Tech", 20, 30, 40);
+        sum("Ram Kumar", "B.A.", 10, 20, 150);
+        sum("Salman Khan", "B.Com.", 100, 200, 1550);
+        // sum(20, 30);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

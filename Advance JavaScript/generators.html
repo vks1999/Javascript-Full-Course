@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance JavaScript</title>
+    <script>
+        /*function* generateit() {
+            console.log("First Message");
+            yield "Yield No.1";
+            console.log("Second Message");
+            yield "Yield No.2";
+            console.log("Third Message");
+            yield "Yield No.3";
+        }*/
+        function* generateit() {
+            // yield 55;
+            yield "PHP";
+            yield "Node";
+            yield "Angular";
+            yield "React";
+            // yield* ["Node", "Angular", "React"];
+            /* // let result = (yield) * 10;
+             let yArray = [yield, yield, yield];
+             // console.log(`Result : ${yArray}`);
+             console.log(`Result : ${yArray[2]}`);
+             /*let nextNum = 300;
+             while (true) {
+                 yield (nextNum++);
+             }*/
+        }
+
+        let g = generateit();
+        // console.log(g.next().value);
+        console.log(g.next().value);
+        console.log(g.return("Ending Now"));
+        console.log(g.next().value);
+        // console.log([...g]);
+        // console.log(g.next().value);
+        // console.log(g.next().value);
+        // console.log(g.next().value);
+        // console.log(g.next().value);
+        /*g.next();
+        // g.next(500);
+        g.next("PHP");
+        // g.next(600);
+        g.next("Python");
+        // g.next(700);
+        g.next("Java");
+        g.next(800);
+        // console.log(g.next().value);
+        // console.log(g.next().value);
+        // console.log(g.next().value);
+        // console.log(g.next().value);
+        // console.log(g.next().value);
+        /*for (let value of g) {
+            if (value > 310) break;
+            console.log(value);
+
+        }*/
+        // g.next();
+        // console.log(g.next().value);
+        // console.log(g.next().value);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

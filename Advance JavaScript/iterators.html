@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance JS</title>
+    <script>
+        let numbers = [100, 200, 300, 400, 500];
+
+        let num = numIterator(numbers);
+
+        function numIterator(arr) {
+            var nextNum = 0;
+            return {
+                next() {
+                    if (nextNum < arr.length) {
+                        return {
+                            value: arr[nextNum++],
+                            done: false
+                        }
+                    } else {
+                        return {
+                            done: true
+                        }
+                    }
+                }
+            }
+        }
+
+        console.log(num.next().value);
+        num.next()
+        console.log(num.next().value);
+        console.log(num.next().value);
+        console.log(num.next().value);
+        console.log(num.next().value);
+        console.log(num.next().value);
+
+        // let str = "Vikash Singh";
+
+        // for (let char of str) {
+        //     console.log(char);
+        // }
+
+        // console.log(typeof numbers[Symbol.iterator]);
+        // let iter = str[Symbol.iterator]();
+
+        // console.log(iter.next());
+        // (iter.next());
+        // let result = iter.next();
+
+        // while (!result.done) {
+        //     console.log(result.value);
+        //     result = iter.next();
+        // }
+
+        // console.log("Hello");
+        // console.log("Hello");
+        // console.log("Hello");
+        // console.log(iter.next().value);
+        // console.log(iter.next().done);
+        // console.log(iter.next());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

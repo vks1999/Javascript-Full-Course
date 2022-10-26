@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javscript</title>
+    <style>
+        .contain {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #test {
+            width: 150px;
+            height: 150px;
+            background: red;
+            display: inline;
+        }
+
+        #test2 {
+            width: 150px;
+            height: 150px;
+            background: green;
+            display: inline;
+            text-align: end;
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contain">
+        <div id="test"></div>
+        <button onclick="stopAnimation()">Stop Animation</button>
+        <div id="test2"></div>
+        <button onclick="stopAnimation2()">Stop Animation</button>
+    </div>
+    <script src="js/js-animation.js"></script>
+</body>
+
+</html>

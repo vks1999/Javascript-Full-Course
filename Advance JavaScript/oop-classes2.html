@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance JavaScript</title>
+    <script>
+        // First method of assigning value using constructor
+
+        /*        class student {
+                    constructor() {
+                        let name;
+                        console.log("Constructor Function");
+                    }
+                    hello() {
+                        console.log("Hello " + this.name);
+                    }
+                }
+                let a = new student();
+                // let b = new student();
+                a.name = "Vikash";
+                a.hello();
+        */
+
+
+        // Another & popular method of assigning value using constructor
+
+        class student {
+            constructor(name, age) {
+                this.studentname = name;
+                this.studentage = age;
+                console.log("Constructor Function");
+            }
+            hello() {
+                // console.log("Hello " + this.studentname + " Your age is " + this.studentage);
+                // console.log(`Hello ${this.studentname} Your age is ${this.studentage}`);
+                document.write(`Hello ${this.studentname} Your age is ${this.studentage}`);
+            }
+
+            static staticMethod() {
+                console.log("Static Function");
+            }
+        }
+
+        let a = new student("Vikash", 25);
+        let b = new student("Ram Kumar", 22);
+        // let b = new student();
+        // a.hello();
+        // b.hello();
+        // a.staticMethod(); // It will not work because static method will work without object
+        student.staticMethod();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance JavaScript</title>
+    <script>
+        /*let p1 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("First promise has resolved");
+                resolve(10);
+            }, 1 * 1000);
+        });*/
+        let promiseCall = function (returnData, message) {
+            return function (resolve, reject) {
+                setTimeout(() => {
+                    console.log(`The ${message} promise has resolved`);
+                    resolve(returnData);
+                }, returnData * 100);
+            }
+        };
+
+        let p1 = new Promise(promiseCall(10, "First"));
+        let p2 = new Promise(promiseCall(20, "Second"));
+        let p3 = new Promise(promiseCall(30, "Third"));
+        let p4 = new Promise(function (resolve, reject) {
+            reject("The 4th Promise has rejected.")
+        });
+
+        /*let p2 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                // console.log("Second promise has resolved");
+                console.log("Second promise has failed");
+                // resolve(20);
+                reject("Failed");
+            }, 2 * 1000);
+        });
+        let p3 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("Third promise has resolved");
+                resolve(30);
+            }, 3 * 1000);
+        });
+*/
+        var total = 0;
+
+        // Promise.all([p1, p2, p3]).then((result) => {
+        Promise.all([p1, p2, p3, p4]).then((result) => {
+
+            for (var i in result) {
+                total += result[i];
+            }
+
+
+            console.log(`Results : ${result}`);
+            console.log(`Total : ${total}`);
+        }).catch((error) => {
+            console.log(`Error : ${error}`);
+        });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
